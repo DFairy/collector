@@ -1,6 +1,5 @@
 <template>
-<div class="wrapper">
-   <div class=main >
+   <div class="main" >
       <div class="main-left" >
          <h3>DFairy的网址收藏大全</h3>
          <ul class="sub-list">
@@ -9,26 +8,27 @@
             </li>
          </ul>
       </div>
-      <div class="main-right">
-         <a :id="item.id" class="main-list" v-for="(item,index) in list" :key="index">
-            <h2><span class="title">{{item.title}}</span></h2>
-            <ul class="list" >
-               <li v-for="(items,id) in item.children" :key="id">
-                  <a :href="items.link" target="blank">
-                     <div class="list-title">{{items.title}}</div>
-                     <div class="list-content">{{items.description}}</div>
-                  </a>
-               </li>
-            </ul>
-         </a>
+      <div class="main-right" ref="menuWrapper">
+         <div class="scroll">
+            <a :id="item.id" class="main-list" v-for="(item,index) in list" :key="index">
+               <h2><span class="title">{{item.title}}</span></h2>
+               <ul class="list" >
+                  <li v-for="(items,id) in item.children" :key="id">
+                     <a :href="items.link" target="blank">
+                        <div class="list-title">{{items.title}}</div>
+                        <div class="list-content">{{items.description}}</div>
+                     </a>
+                  </li>
+               </ul>
+            </a>
+         </div>        
       </div> 
    </div>
-</div>
 </template>
 
 <script>
 import {lists} from '../common/js/data';
-import BScroll from 'better-scroll'
+// import BScroll from 'better-scroll'
 export default {
    data(){
       return{
@@ -37,8 +37,8 @@ export default {
    },
    created(){
        /* eslint-disable */ 
-      let wrapper = document.querySelector('.wrapper')
-      let scroll = new BScroll(wrapper)
+      // let wrappers = document.querySelector('.main-right')
+      // let scroll = new BScroll('.main-right')
    }
 }
 </script>
