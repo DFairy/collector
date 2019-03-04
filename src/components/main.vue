@@ -1,5 +1,5 @@
 <template>
-
+<div class="wrapper">
    <div class=main >
       <div class="main-left" >
          <h3>DFairy的网址收藏大全</h3>
@@ -23,10 +23,12 @@
          </a>
       </div> 
    </div>
+</div>
 </template>
 
 <script>
-import {lists} from '../common/js/data'
+import {lists} from '../common/js/data';
+import BScroll from 'better-scroll'
 export default {
    data(){
       return{
@@ -34,16 +36,9 @@ export default {
       }
    },
    created(){
-      // let lists=listData.lists
-      // console.log(lists)
-      // for(let key in lists){ 
-      //    if(!lists.hasOwnProperty(key)){
-      //       continue;
-      //    }
-      //    let item = {}; 
-      //    item[key] = lists[key]; 
-      //    this.list.push(item); 
-      // }
+       /* eslint-disable */ 
+      let wrapper = document.querySelector('.wrapper')
+      let scroll = new BScroll(wrapper)
    }
 }
 </script>
@@ -59,12 +54,14 @@ export default {
    background-position: center center;
    background-size: cover;
    background-attachment: fixed;
+   // -webkit-overflow-scrolling: touch;
    .main-left{
       flex: 0 0 200px;
       flex-direction:column;
       width: 200px;
       margin-right: 20px;
       color: #fff;
+      overflow-y: auto;
       h3{
          width: 100%;
          height: 60px;
@@ -104,6 +101,7 @@ export default {
       padding: 20px;
       flex: 1;
       overflow-y: auto;
+      transition: all 1s ease-in;
       .main-list{
          width: 100%;
          height: 100%;
@@ -152,13 +150,13 @@ export default {
             justify-content: flex-start;
             // align-items: center;
             li{
-               width: 170px;
+               width: 150px;
                // min-width: 200px;
                height: 50px;
                border-radius: 5px;
                padding: 5px;
                margin-bottom: 10px;
-               margin-right: 20px;
+               margin-right: 10px;
                box-shadow: 3px 3px 0 rgba(0,0,0,0.08);
                border: 1px solid #f5f5f5;
                transition: all .2s ease-in;
@@ -185,8 +183,11 @@ export default {
             }
          }
       }
+   }  
+}
+@media only screen and (max-width: 700px) {
+   .main .main-left { 
+      display: none; 
    }
-   
-   
 }
 </style>
