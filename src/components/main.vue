@@ -14,7 +14,7 @@
                <h2><span class="title">{{item.title}}</span></h2>
                <ul class="list" >
                   <li v-for="(items,id) in item.children" :key="id">
-                     <a :href="items.link" target="blank">
+                     <a :href="items.link" target="_blank">
                         <div class="list-title">{{items.title}}</div>
                         <div class="list-content">{{items.description}}</div>
                      </a>

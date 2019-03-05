@@ -386,7 +386,7 @@ export function lists() {
                     description: "超级全的各种文档大全"
                 },
                 {
-                    link: "https://webpack.js.org/concepts/#entry",
+                    link: "https://webpack.docschina.org/concepts/",
                     title: "webpack",
                     description: "webpack网址"
                 },
