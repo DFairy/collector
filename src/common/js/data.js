@@ -1,7 +1,6 @@
 export function lists() {
     let lists = [{
             title: "平台",
-            id: "d1",
             children: [{
                     link: "https://github.com/DFairy",
                     title: "github",
@@ -46,7 +45,6 @@ export function lists() {
         },
         {
             title: "CSS",
-            id: "d2",
             children: [{
                     link: "https://chokcoco.github.io/CSS-Inspiration/#/./init",
                     title: "CSS-Inspiration",
@@ -61,7 +59,6 @@ export function lists() {
         },
         {
             title: "JAVASCRIPT",
-            id: "d3",
             children: [{
                     link: "https://www.sitepoint.com/dom-manipulation-vanilla-javascript-no-jquery/?utm_campaign=read_more&utm_medium=email&utm_source=mybridge",
                     title: "javascript-no-jquery",
@@ -86,7 +83,6 @@ export function lists() {
         },
         {
             title: "前端工具",
-            id: "d4",
             children: [{
                     link: "https://tinypng.com/",
                     title: "压缩图片",
@@ -116,7 +112,6 @@ export function lists() {
         },
         {
             title: "VUE",
-            id: "d5",
             children: [{
                     link: "https://ustbhuangyi.github.io/vue-analysis/",
                     title: "vue.js详解",
@@ -165,7 +160,6 @@ export function lists() {
         },
         {
             title: "组件",
-            id: "d6",
             children: [{
                     link: "https://echarts.baidu.com/echarts2/doc/example.html",
                     title: "echarts",
@@ -207,7 +201,6 @@ export function lists() {
         },
         {
             title: "移动端框架",
-            id: "d7",
             children: [{
                     link: "http://vue.framework7.cn/index.php/Index/templates.html",
                     title: "framework7-vue",
@@ -233,7 +226,6 @@ export function lists() {
         },
         {
             title: "pc端框架",
-            id: "d8",
             children: [{
                     link: "https://www.iviewui.com/docs/guide/install",
                     title: "iview",
@@ -273,7 +265,6 @@ export function lists() {
         },
         {
             title: "前端大全",
-            id: 'd9',
             children: [{
                     link: "https://www.sucaihuo.com/video/157-0-0",
                     title: "素材火",
@@ -333,7 +324,6 @@ export function lists() {
         },
         {
             title: "前端开发导航",
-            id: "d10",
             children: [{
                     link: "https://cloud.tencent.com/developer/devdocs",
                     title: "腾讯云开发者手册",
@@ -354,7 +344,6 @@ export function lists() {
         },
         {
             title: "图标库",
-            id: "d11",
             children: [{
                     link: "https://www.iconfont.cn/",
                     title: "iconfont",
@@ -379,7 +368,6 @@ export function lists() {
         },
         {
             title: "文档详解",
-            id: "d12",
             children: [{
                     link: "https://developer.mozilla.org/en-US/docs/Web",
                     title: "文档大全",
@@ -404,7 +392,6 @@ export function lists() {
         },
         {
             title: "小程序",
-            id: "d13",
             children: [{
                     link: "https://developers.weixin.qq.com/miniprogram/dev/",
                     title: "小程序文档",
@@ -424,7 +411,6 @@ export function lists() {
         },
         {
             title: "photoshop",
-            id: "d14",
             children: [{
                     link: "https://brushes8.com/category/photoshop-brushes",
                     title: "photoshop-brushes",
@@ -489,8 +475,11 @@ export function lists() {
         },
         {
             title: "网址导航",
-            id: "d15",
             children: [{
+                    link: "https://docschina.org/",
+                    title: "印记中文",
+                    description: "各种网址链接"
+                }, {
                     link: "http://search.chongbuluo.com/",
                     title: "快搜",
                     description: "快搜网址"
@@ -513,8 +502,40 @@ export function lists() {
             ]
         },
         {
+            title: "node.js生态",
+            children: [{
+                    link: "https://koajs.docschina.org/",
+                    title: "koa",
+                    description: "node框架"
+                },
+                {
+                    link: "http://expressjs.com/zh-cn/",
+                    title: "express",
+                    description: "node框架"
+                }
+            ]
+        },
+        {
+            title: "视频播放器",
+            children: [{
+                    link: "https://h5player.bytedance.com/",
+                    title: "西瓜视频播放器",
+                    description: "带解析器,能节省流量的播放器"
+                },
+                {
+                    link: "http://chimee.org/",
+                    title: "chimee",
+                    description: "可以扩展的视频框架"
+                },
+                {
+                    link: "https://github.com/Bilibili/flv.js",
+                    title: "flv.js",
+                    description: "Bilibili团队开发的"
+                }
+            ]
+        },
+        {
             title: "富文本编辑",
-            id: "d16",
             children: [{
                     link: "https://www.tiny.cloud/",
                     title: "tiny",
@@ -539,7 +560,6 @@ export function lists() {
         },
         {
             title: "各种案例",
-            id: 'd17',
             children: [{
                     link: "https://blog.csdn.net/pugongyingyangyue/article/details/77882115",
                     title: "草根金融app案例",

@@ -4,13 +4,13 @@
          <h3>DFairy的网址收藏大全</h3>
          <ul class="sub-list">
             <li v-for="(term,index) in list" :key="index">
-               <a :href="'#'+term.id">{{term.title}}</a>
+               <a :href="'#'+index">{{term.title}}</a>
             </li>
          </ul>
       </div>
       <div class="main-right" ref="menuWrapper">
          <div class="scroll">
-            <a :id="item.id" class="main-list" v-for="(item,index) in list" :key="index">
+            <a :id="index" class="main-list" v-for="(item,index) in list" :key="index">
                <h2><span class="title">{{item.title}}</span></h2>
                <ul class="list" >
                   <li v-for="(items,id) in item.children" :key="id">
