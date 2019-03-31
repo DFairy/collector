@@ -15,5 +15,15 @@ module.exports = {
     /**
      * 打包后没有map
      */
-    productionSourceMap: false
+    productionSourceMap: false,
+    // devServer: {
+    //     proxy: {
+    //         '': {
+    //             target: 'http://106.13.94.82:3000',
+    //             changeOrigin: true,
+    //             ws: true
+
+    //         }
+    //     }
+    // },
 }

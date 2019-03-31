@@ -12,6 +12,11 @@ export function lists() {
                     description: "csdn平台"
                 },
                 {
+                    link: "https://leetcode-cn.com/problemset/all/",
+                    title: "letcode",
+                    description: "编码平台"
+                },
+                {
                     link: "https://www.imooc.com/",
                     title: "慕课网",
                     description: "高质量的vue课程"
@@ -40,7 +45,31 @@ export function lists() {
                     link: "https://mp.weixin.qq.com/wxopen/initprofile?action=home&lang=zh_CN&token=170548031",
                     title: "微信公众号",
                     description: "微信公众号"
+                },
+                {
+                    link: "https://outlook.live.com/mail/inbox",
+                    title: "outlook邮箱",
+                    description: "outlook邮箱"
+                },
+                {
+                    link: "https://www.npmjs.com/",
+                    title: "npmjs",
+                    description: "查询各种插件的网站"
                 }
+            ]
+        },
+        {
+            title: "服务器",
+            children: [{
+                    link: "https://portal.qiniu.com/user/key",
+                    title: "七牛云",
+                    description: "七牛云服务器"
+                },
+                {
+                    link: "https://login.bce.baidu.com/",
+                    title: "百度云服务器",
+                    description: "百度云服务器"
+                },
             ]
         },
         {
@@ -84,6 +113,10 @@ export function lists() {
         {
             title: "前端工具",
             children: [{
+                    link: "http://tool.oschina.net/diff/",
+                    title: "代码比对",
+                    description: "代码比对网站"
+                }, {
                     link: "https://tinypng.com/",
                     title: "压缩图片",
                     description: "压缩图片大小的工具"
@@ -194,6 +227,16 @@ export function lists() {
                     link: "http://html2canvas.hertzen.com/",
                     title: "html2canvas",
                     description: "html转换成canvas"
+                },
+                {
+                    link: "https://www.npmjs.com/package/vue-infinite-scroll",
+                    title: "vue-infinite-scroll",
+                    description: "滑动加载插件"
+                },
+                {
+                    link: "https://www.npmjs.com/package/vue-lazy-load",
+                    title: "vue-lazy-load",
+                    description: "懒加载插件"
                 },
 
 
@@ -369,7 +412,7 @@ export function lists() {
         {
             title: "文档详解",
             children: [{
-                    link: "https://developer.mozilla.org/en-US/docs/Web",
+                    link: "https://developer.mozilla.org/zh-CN/docs/Web",
                     title: "文档大全",
                     description: "超级全的各种文档大全"
                 },
@@ -504,6 +547,36 @@ export function lists() {
         {
             title: "node.js生态",
             children: [{
+                    link: "http://blog.fens.me/series-nodejs/",
+                    title: "从零开始node系列文章",
+                    description: "node学习文档"
+                },
+                {
+                    link: "https://nodejs.org/api/documentation.html",
+                    title: "node文档",
+                    description: "node文档"
+                },
+                {
+                    link: "http://nqdeng.github.io/7-days-nodejs/",
+                    title: "7天学会nodejs",
+                    description: "node学习文档"
+                },
+                {
+                    link: "https://github.com/alsotang/node-lessons",
+                    title: "nodejs包教包不会",
+                    description: "node学习文档"
+                },
+                {
+                    link: "https://www.nodebeginner.org/index-zh-cn.html",
+                    title: "node入门书籍",
+                    description: "很详细的node入门介绍"
+                },
+                {
+                    link: "https://cnodejs.org/",
+                    title: "node论坛",
+                    description: "node论坛"
+                },
+                {
                     link: "https://koajs.docschina.org/",
                     title: "koa",
                     description: "node框架"
@@ -512,6 +585,11 @@ export function lists() {
                     link: "http://expressjs.com/zh-cn/",
                     title: "express",
                     description: "node框架"
+                },
+                {
+                    link: "https://cn.mongoosedoc.top/docs/index.html",
+                    title: "mongoose",
+                    description: "封装mongodb数据库"
                 }
             ]
         },

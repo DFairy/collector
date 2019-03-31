@@ -6,10 +6,13 @@
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint",
-        "report": "vue-cli-service build --report"
+        "report": "vue-cli-service build --report",
+        "alpha":"vue-cli-service build --mode alpha"
     },
     "dependencies": {
+        "axios": "^0.18.0",
         "better-scroll": "^1.14.1",
+        "element-ui": "^2.7.0",
         "vue": "^2.6.6"
     },
     "devDependencies": {
