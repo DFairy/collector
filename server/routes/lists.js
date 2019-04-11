@@ -5,7 +5,7 @@ var List = require('../models/lists');
 
 /* GET users listing. */
 //查询
-router.post('/', function(req, res, next) {
+router.post('/', function(req, res) {
     List.find({}, (err, listDoc) => {
         if (err) {
             res.json({
@@ -25,7 +25,7 @@ router.post('/', function(req, res, next) {
 
 
 //添加分类
-router.post('/addTitle', function(req, res, next) {
+router.post('/addTitle', function(req, res) {
     let titleItem = req.body.titleItem
     if (!titleItem) {
         res.json({
@@ -43,7 +43,7 @@ router.post('/addTitle', function(req, res, next) {
             res.json({
                 status: '1',
                 msg: '插入失败',
-                result: ''
+                result: doc
             })
         } else {
             res.json({
@@ -56,7 +56,7 @@ router.post('/addTitle', function(req, res, next) {
 });
 
 //删除分类
-router.post('/del', function(req, res, next) {
+router.post('/del', function(req, res) {
     let titleItem = req.body.titleItem
     if (!titleItem) {
         res.json({
@@ -79,16 +79,16 @@ router.post('/del', function(req, res, next) {
             res.json({
                 status: '0',
                 msg: '删除成功',
-                result: ''
+                result: listDoc
             })
         }
     })
 });
 
 //添加网址
-router.post('/addWeb', function(req, res, next) {
+router.post('/addWeb', function(req, res) {
     let titleItem = req.body.titleItem;
-    link = req.body.link,
+    let link = req.body.link,
         name = req.body.name,
         description = req.body.description;
     if (!titleItem) {
@@ -100,13 +100,13 @@ router.post('/addWeb', function(req, res, next) {
         return false
     }
     List.updateOne({ title: titleItem }, {
-        '$push': {
-            children: {       
-                link: link,
-                title: name,
-                description: description
+        $push: {
+            'children': {
+                'link': link,
+                'title': name,
+                'description': description
             }
-        }    
+        }
     }, (err, listDoc) => {
         if (err) {
             res.json({
@@ -127,9 +127,9 @@ router.post('/addWeb', function(req, res, next) {
 
 
 //删除网址
-router.post('/delWeb', function(req, res, next) {
-    let titleItem = req.body.titleItem;
-    name = req.body.name;
+router.post('/delWeb', function(req, res) {
+    let titleItem = req.body.titleItem,
+        name = req.body.name;
     if (!titleItem) {
         res.json({
             status: '1',
@@ -138,12 +138,14 @@ router.post('/delWeb', function(req, res, next) {
         })
         return false
     }
-    List.updateOne({ title: titleItem }, {
-        '$pull': {
-            children: {       
-                title: name
+    List.updateOne({
+        title: titleItem
+    }, {
+        $pull: {
+            'children': {
+                'title': name
             }
-        }    
+        }
     }, (err, listDoc) => {
         if (err) {
             res.json({
@@ -161,5 +163,6 @@ router.post('/delWeb', function(req, res, next) {
     })
 
 });
+
 
 module.exports = router;

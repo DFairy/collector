@@ -99,10 +99,10 @@
                   </el-form-item>
                   <el-form-item label="网址标题" :label-width="formLabelWidth">                    
                      <el-select v-model="form3.name" filterable placeholder="请选择标题">
-                     <el-option  v-for="item in listName" 
-                        :key="item.title" 
-                        :label="item.title" 
-                        :value="item.title">
+                     <el-option  v-for="items in listName" 
+                        :key="items.title" 
+                        :label="items.title" 
+                        :value="items.title">
                      </el-option>
                      </el-select>
                   </el-form-item>
@@ -219,7 +219,7 @@ export default {
          this.dialogVisibleWeb=false
       },
       delWeb(){
-         this.$api.list.addWeb({
+         this.$api.list.delWeb({
             titleItem:this.form3.title,
             name:this.form3.name}).then((res)=>{
                res.data.status=='0'?this.tip('success','删除成功'):this.tip('error','删除失败')
